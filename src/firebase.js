@@ -19,9 +19,21 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
 
+export const db = getFirestore();
 export const auth = getAuth(app);
 export const collectionReference = collection(db, "sensors");
 
 export default app;
+
+// const ColRef = collection(db, "sensors");
+
+// getDocs(ColRef)
+//   .then((snapshot) => {
+//     let sensors = [];
+//     snapshot.docs.forEach((doc) => {
+//       sensors.push({ ...doc.data(), id: doc.id });
+//     });
+//     // console.log(sensors);
+//   })
+//   .catch((err) => console.log(err.message));
