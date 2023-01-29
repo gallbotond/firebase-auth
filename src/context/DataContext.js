@@ -1,7 +1,6 @@
 import { collectionReference, db } from "../firebase";
 import { addDoc, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore";
 import { createContext, useContext, useEffect, useState } from "react";
-import { async } from "@firebase/util";
 
 const DataContext = createContext();
 
